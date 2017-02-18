@@ -14,7 +14,7 @@
 
 ```
 
-https://akshayanand.herokuapp.com/apis/v1/currency/?from=from_currency&to=to_currency&amount=amount&format=format
+https://akshayanand.herokuapp.com/api/utc/?location=location&format=format
 
 ```
 
@@ -25,10 +25,8 @@ https://akshayanand.herokuapp.com/apis/v1/currency/?from=from_currency&to=to_cur
 
 ```
 
-from   -  From currency code. Must be a valid code. 
-to     -  To currency code. Must be a valid code.
-amount -  Amount to be converted. Only numeric data is accepted.
-format -  (Optional). Specifies output response type. JSON(default), XML or DIRECT.
+location   -  A valid location of where you want the current time. 
+format -  (Optional). Specifies output response type. JSON(default) or XML .
 
 ```
 
@@ -45,13 +43,20 @@ format -  (Optional). Specifies output response type. JSON(default), XML or DIRE
 
 {
 "data":{
-          "from" : from_currency_type ,
-          "from_currency" : from_currency_full_name ,
-          "to" : to_currency_type ,
-          "to_currency" : to_currency_full_name ,
-          "amount" : amount ,
-          "response" : result_value
-       }
+		"location" : location ,
+		"location_name" : location name ,
+		"hours" : hours ,
+		"minutes" : minutes ,
+		"seconds" : seconds ,
+		"meridiem" : meridiem(am/pm) ,
+		"day" : day,
+		"month" : month,
+		"date" : date,
+		"year" : year
+		"error_no" : error_no,
+		"error" : error,
+		"error_desc" : error_desc
+	}
 }
 
 ```
@@ -62,25 +67,26 @@ format -  (Optional). Specifies output response type. JSON(default), XML or DIRE
 ```xml
 
 <data>
- <item>
-  <from> from_currency_type </from>
-  <from_currency> from_currency_full_name </from>
-  <to> to_currency_type </to>
-  <to_currency> to_currency_full_name </to>
-  <amount> amount </amount>
-  <response> result_value </response>
- </item>
+	<item>
+		<location> location <location>
+		<location_name> location name </location_name>
+		<hours> hours </hours>
+		<minutes> minutes </minutes>
+		<seconds> seconds </seconds>
+		<meridiem> meridiem(am/pm) </meridiem>
+		<day> day </day>
+		<month> month </month>
+		<date> date </date>
+		<year> year </year>
+		<error_no> error_no </error_no>
+		<error> error </error>
+		<error_desc> error_desc </error_desc>
+	</item>
 </data>
 
 ```	
 			
-##### DIRECT format	
 
-```
-
- result_value 
-
-```
 
 
 ---
@@ -88,12 +94,14 @@ format -  (Optional). Specifies output response type. JSON(default), XML or DIRE
 
 ##### NOTE:
 
-_Please go through the currency codes and error codes page to properly use the api call parameters avoid confusion._
+_Please go through the location codes and error codes page to properly use the api call parameters avoid confusion._
 
 
 ---
 
+
 ## Location Codes
+
 
 **_CODE_** | **_UTC_**
 ---- | ----
@@ -662,13 +670,9 @@ _Please go through the currency codes and error codes page to properly use the a
 
  **_ERROR NO._** | **_ERROR_** | **_DESCRIPTION_**
 -------------- | -------------- | ----------------
+	**000**    | *NO_ERROR* | No Error
     **001**    | *DATA_INCOMPLETE_ERROR* | This error occurs because one of the required parameters(from, to and amount) is not provided with the  call. Please check the documentation for proper api call.
-    **002**    | *INVALID_CONVERSION_ERROR* | This error occurs because the from and to currency parameters are the same.
-    **003**    | *INVALID_FROM_VALUE_ERROR* | This error occurs because the from parameter is invalid. Please check the currency codes in the documentation for valid currency codes.  						
-    **004**    | *INVALID_TO_VALUE_ERROR* | This error occurs because the from and to currency parameters are the same. 		
-    **005**    | *INVALID_AMOUNT_ERROR* | This error occurs because the amount specified is not a valid numeric.
-    **006**    | *COULD_NOT_CONVERT*    | This error occurs because the conversion is not possible.
-
+    
 -----
 
 [Visit the creator's site...](https://akshayanandraut.github.io)
