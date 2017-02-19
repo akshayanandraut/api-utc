@@ -34,7 +34,7 @@ format -  (Optional). Specifies output response type. JSON(default) or XML .
 
 ### Output format:
 
-#### The output response will be in JSON format. Kindly check the structure below.
+#### The output response will be in JSON format by default. Kindly check the structure below.
 
 
 ##### JSON format
@@ -92,10 +92,9 @@ format -  (Optional). Specifies output response type. JSON(default) or XML .
 
 hours:minutes:seconds meridiem day, month,date, year
 
-Eg: 4:10:19 PM Sunday, February 19, 2017
-
 ```	
-			
+
+_Eg:_ **_4:10:19 PM Sunday, February 19, 2017_**			
 
 
 
@@ -115,6 +114,7 @@ _Please go through the location codes and error codes page to properly use the a
 
 **_CODE_** | **_UTC_**
 ---- | ----
+ **UTC** | Universal Coordinated Time
  **AF** | Afghanistan
   **AX** | Aland Islands
   **AL** | Albania
