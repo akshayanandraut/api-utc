@@ -6,7 +6,7 @@
 
 ---
 
-## Get real-time UTC.
+## Get UTC or also get time in any specific location mentioned below.
 
 ---
 
@@ -26,7 +26,7 @@ https://akshayanand.herokuapp.com/api/utc/?location=location&format=format
 ```
 
 location   -  A valid location of where you want the current time. 
-format -  (Optional). Specifies output response type. JSON(default) or XML .
+format -  (Optional). Specifies output response type. JSON(default), XML or DIRECT.
 
 ```
 
