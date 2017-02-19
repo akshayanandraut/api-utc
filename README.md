@@ -85,6 +85,16 @@ format -  (Optional). Specifies output response type. JSON(default) or XML .
 </data>
 
 ```	
+
+##### DIRECT format
+
+```
+
+hours:minutes:seconds meridiem day, month,date, year
+
+Eg: 4:10:19 PM Sunday, February 19, 2017
+
+```	
 			
 
 
