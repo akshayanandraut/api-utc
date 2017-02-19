@@ -44,7 +44,7 @@ format -  (Optional). Specifies output response type. JSON(default) or XML .
 {
 "data":[{
 		"location" : location ,
-		"location_name" : location name ,
+		"location_name" : location_name ,
 		"hours" : hours ,
 		"minutes" : minutes ,
 		"seconds" : seconds ,
