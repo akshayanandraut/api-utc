@@ -42,7 +42,7 @@ format -  (Optional). Specifies output response type. JSON(default) or XML .
 ```json	
 
 {
-"data":{
+"data":[{
 		"location" : location ,
 		"location_name" : location name ,
 		"hours" : hours ,
@@ -56,7 +56,7 @@ format -  (Optional). Specifies output response type. JSON(default) or XML .
 		"error_no" : error_no,
 		"error" : error,
 		"error_desc" : error_desc
-	}
+	}]
 }
 
 ```
@@ -672,6 +672,7 @@ _Please go through the location codes and error codes page to properly use the a
 -------------- | -------------- | ----------------
 	**000**    | *NO_ERROR* | No Error
     **001**    | *DATA_INCOMPLETE_ERROR* | This error occurs because one of the required parameters(from, to and amount) is not provided with the  call. Please check the documentation for proper api call.
+	**002** | *INVALID_LOCATION_ERROR* | This error occurs because the location code entered is invalid. Please check the documentation for proper api call.
     
 -----
 
